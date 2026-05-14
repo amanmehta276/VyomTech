@@ -177,10 +177,14 @@ section{padding:6rem 5%}
 .t3{background:linear-gradient(135deg,#e8f8f1,#d0f0e4)}
 .t4{background:linear-gradient(135deg,#fff4e6,#ffe8cc)}
 .t5{background:linear-gradient(135deg,#fce8f3,#f8d0e8)}
+.t6{background:linear-gradient(135deg,#e6f9ff,#ccf0ff)}
+.t7{background:linear-gradient(135deg,#fff9e6,#fff0cc)}
+.t8{background:linear-gradient(135deg,#f0ffe6,#e0ffcc)}
 .pbg{position:absolute;top:10px;right:10px;font-size:0.58rem;font-weight:600;padding:3px 9px;border-radius:980px;letter-spacing:0.04em;text-transform:uppercase}
 .pb-w{background:#e8f4fd;color:#0071e3}
 .pb-a{background:#f0eaff;color:#6c35de}
 .pb-g{background:#e8f8f1;color:#1d8348}
+.pb-o{background:#fff4e6;color:#c47c00}
 .pc-b{padding:1.1rem;flex:1;display:flex;flex-direction:column}
 .pc-b h3{font-family:'Bricolage Grotesque',sans-serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem}
 .pc-b p{font-size:0.78rem;color:var(--ink3);line-height:1.6;margin-bottom:0.8rem;flex:1}
@@ -206,6 +210,9 @@ section{padding:6rem 5%}
 /* GHOST */
 .ghost{background:transparent;border:1.5px dashed var(--off2);border-radius:16px;display:flex;align-items:center;justify-content:center;min-height:200px;transition:border-color .2s}
 .ghost:hover{border-color:var(--blue)}
+
+/* PC thumbnail image support */
+.pc-th img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* ===== FOUNDER ===== */
 .founder{background:var(--off)}
@@ -377,32 +384,154 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       <p class="sb">Open tools, experiments, and personal projects shipped under the Vyom Tech banner.</p>
     </div>
     <div class="pg">
+
+      <!-- GitHub -->
       <div class="pc reveal">
-        <div class="pc-th t1"><i class="fab fa-github" style="font-size:2.8rem;color:#1d1d1f"></i><span class="pbg pb-w">Open Source</span></div>
-        <div class="pc-b"><h3>GitHub — Aman Mehta</h3><p>All open-source code, experiments, and repositories. From web tools to automation scripts.</p><div class="pc-f"><div class="pst"><span class="ps">Open Source</span></div><a href="https://github.com/amanmehta276" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t1">
+          <!-- Add project image here: <img src="images/github-preview.png" alt="GitHub"> -->
+          <i class="fab fa-github" style="font-size:2.8rem;color:#1d1d1f"></i>
+          <span class="pbg pb-w">Open Source</span>
+        </div>
+        <div class="pc-b">
+          <h3>GitHub — Aman Mehta</h3>
+          <p>All open-source code, experiments, and repositories. From web tools to automation scripts.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">Open Source</span></div>
+            <a href="https://github.com/amanmehta276" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- GateHub -->
       <div class="pc reveal">
-        <div class="pc-th t2"><span>🧠</span><span class="pbg pb-a">AI Tool</span></div>
-        <div class="pc-b"><h3>TrackMind</h3><p>An intelligent habit and focus tracker — AI-powered insights to help you build better routines.</p><div class="pc-f"><div class="pst"><span class="ps">React</span><span class="ps">AI</span></div><a href="#contact" class="pl">Soon <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t6">
+          <!-- Add project image here: <img src="images/gatehub-preview.png" alt="GateHub"> -->
+          <img src="images/WhatsApp Image 2026-05-14 at 16.43.17.jpeg" alt="TrackMind">
+          <!-- <span>🚪</span> -->
+          <span class="pbg pb-w">Web App</span>
+        </div>
+        <div class="pc-b">
+          <h3>GateHub</h3>
+          <p>A smart gate management and visitor tracking web app — streamlining entry, exit, and security logs.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">Web App</span></div>
+            <a href="https://projectalps.netlify.app" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- TrackMind -->
       <div class="pc reveal">
-        <div class="pc-th t4"><span>🎓</span><span class="pbg pb-w">Web Tool</span></div>
-        <div class="pc-b"><h3>Portfolio Builder</h3><p>A simple tool for students to generate professional portfolio websites — instant, free, shareable.</p><div class="pc-f"><div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div><a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t2">
+          <!-- Add project image here: <img src="images/trackmind-preview.png" alt="TrackMind"> -->
+        <img src="images/image.png" alt="TrackMind">
+          <!-- <span>🧠</span> -->
+          <span class="pbg pb-a">AI Tool</span>
+        </div>
+        <div class="pc-b">
+          <h3>TrackMind</h3>
+          <p>An intelligent habit and focus tracker — AI-powered insights to help you build better routines.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">React</span><span class="ps">AI</span></div>
+            <a href="https://trackmindnotes.netlify.app" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- DexMaster -->
       <div class="pc reveal">
-        <div class="pc-th t3"><span>📊</span><span class="pbg pb-g">Dashboard</span></div>
-        <div class="pc-b"><h3>Analytics Dashboard</h3><p>Real-time data visualization for tracking KPIs with live charts and exportable reports.</p><div class="pc-f"><div class="pst"><span class="ps">React</span><span class="ps">Chart.js</span></div><a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t7">
+          <!-- Add project image here: <img src="images/dexmaster-preview.png" alt="DexMaster"> -->
+          <span>⚡</span>
+          <span class="pbg pb-o">Web Tool</span>
+        </div>
+        <div class="pc-b">
+          <h3>DexMaster</h3>
+          <p>A feature-rich Pokédex-style explorer — browse, search, and discover detailed Pokémon data instantly.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
+            <a href="https://amanmehta276.github.io/DexMasters/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- VyomWorld -->
       <div class="pc reveal">
-        <div class="pc-th t5"><span>🤖</span><span class="pbg pb-a">AI Project</span></div>
-        <div class="pc-b"><h3>AI Chatbot Assistant</h3><p>Intelligent chatbot providing 24/7 customer support using modern AI APIs — plug &amp; play.</p><div class="pc-f"><div class="pst"><span class="ps">Python</span><span class="ps">OpenAI</span></div><a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t3">
+          <!-- Add project image here: <img src="images/vyomworld-preview.png" alt="VyomWorld"> -->
+          <img src="images/vim.png" alt="VyomWorld">
+          <!-- <span>🌍</span>/ -->
+          <span class="pbg pb-g">Project</span>
+        </div>
+        <div class="pc-b">
+          <h3>VyomWorld</h3>
+          <p>An immersive world-building web experience — explore the Vyom Tech universe in a creative format.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
+            <a href="https://amanmehta276.github.io/VyomWorld/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
+
+      <!-- Pokebuild -->
+      <div class="pc reveal">
+        <div class="pc-th t4">
+          <!-- Add project image here: <img src="images/pokebuild-preview.png" alt="Pokebuild"> -->
+          <span>🎮</span>
+          <span class="pbg pb-o">Web Tool</span>
+        </div>
+        <div class="pc-b">
+          <h3>Pokebuild</h3>
+          <p>Build and customize your perfect Pokémon team — a fun, interactive team-builder for fans and strategists.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
+            <a href="https://amanmehta276.github.io/Pokebuild/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Website -->
+      <div class="pc reveal">
+        <div class="pc-th t5">
+          <!-- Add project image here: <img src="images/personal-preview.png" alt="Personal Website"> -->
+          <span>👤</span>
+          <span class="pbg pb-a">Portfolio</span>
+        </div>
+        <div class="pc-b">
+          <h3>Personal Website</h3>
+          <p>Aman's personal developer portfolio — showcasing skills, projects, and journey as a software engineer.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
+            <a href="https://amanmehta276.github.io/Personal_website/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Builder -->
+      <div class="pc reveal">
+        <div class="pc-th t4">
+          <!-- Add project image here: <img src="images/portfoliobuilder-preview.png" alt="Portfolio Builder"> -->
+          <span>🎓</span>
+          <span class="pbg pb-w">Web Tool</span>
+        </div>
+        <div class="pc-b">
+          <h3>Portfolio Builder</h3>
+          <p>A simple tool for students to generate professional portfolio websites — instant, free, shareable.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
+            <a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming soon ghost -->
       <div class="ghost reveal" style="display:flex;align-items:center;justify-content:center">
         <div style="text-align:center;padding:1.5rem">
           <div style="font-size:1.8rem;margin-bottom:.6rem">🚀</div>
           <p style="font-size:.8rem;color:var(--ink4);line-height:1.6">More projects<br>shipping soon</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -417,8 +546,9 @@ footer p{font-size:0.76rem;color:var(--ink4)}
     </div>
     <div class="pg">
       <div class="feat reveal">
+        <!-- Add Ghosh Global image here: <img src="images/gg.png" alt="Ghosh Global" class="feat-th"> -->
+        <img src="images/gg.png" alt="Ghosh Global" class="feat-th" onerror="this.style.display='none'">
         <!-- <div class="feat-th">🌐</div> -->
-         <img src="images/gg.png" alt="Ghosh Global" class="feat-th" onerror="this.style.display='none'">
         <div class="feat-b">
           <div class="feat-cl">Client Project</div>
           <h3>Ghosh Global</h3>
@@ -428,8 +558,19 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         </div>
       </div>
       <div class="pc reveal">
-        <div class="pc-th t1"><span>🛒</span><span class="pbg pb-w">E-Commerce</span></div>
-        <div class="pc-b"><h3>E-Commerce Platform</h3><p>Full-featured online store with product management, cart, and payment integration for a local business.</p><div class="pc-f"><div class="pst"><span class="ps">React</span><span class="ps">Node.js</span><span class="ps">MongoDB</span></div><a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="pc-th t1">
+          <!-- Add project image here: <img src="images/ecommerce-preview.png" alt="E-Commerce"> -->
+          <span>🛒</span>
+          <span class="pbg pb-w">E-Commerce</span>
+        </div>
+        <div class="pc-b">
+          <h3>E-Commerce Platform</h3>
+          <p>Full-featured online store with product management, cart, and payment integration for a local business.</p>
+          <div class="pc-f">
+            <div class="pst"><span class="ps">React</span><span class="ps">Node.js</span><span class="ps">MongoDB</span></div>
+            <a href="#contact" class="pl">View <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
       <div class="ghost reveal" style="display:flex;align-items:center;justify-content:center">
         <div style="text-align:center;padding:1.5rem">
@@ -447,7 +588,9 @@ footer p{font-size:0.76rem;color:var(--ink4)}
   <div class="founder-g">
     <div class="reveal" style="display:flex;justify-content:center">
       <div class="favatar">
+        <!-- Add founder image here: <img src="images/AMAN.jpeg" alt="Aman Mehta"> -->
         <img src="images/AMAN.jpeg" alt="Aman Mehta" onerror="this.style.display='none'">
+        <!-- AM -->
       </div>
     </div>
     <div class="reveal">
