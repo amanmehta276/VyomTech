@@ -263,10 +263,20 @@ footer p{font-size:0.76rem;color:var(--ink4)}
   .about-g{grid-template-columns:1fr;gap:2.5rem}
   .srv-g{grid-template-columns:1fr 1fr}
   .pg{grid-template-columns:1fr 1fr}
+  .works-b .pg{grid-template-columns:1fr}
   .feat{grid-template-columns:1fr}
   .feat-th{min-height:130px}
   .founder-g{grid-template-columns:1fr;gap:2.5rem}
   .favatar{width:180px;height:180px;font-size:3rem;margin:0 auto}
+  .feat-b{padding:1.5rem}
+}
+@media(max-width:700px){
+  .pg{grid-template-columns:1fr}
+  .works-b .pg{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr}
+  .feat-th{min-height:140px}
+  .feat-b{padding:1rem}
+  .pc-th{min-height:110px}
 }
 @media(max-width:600px){
   section{padding:4rem 5%}
@@ -313,7 +323,6 @@ footer p{font-size:0.76rem;color:var(--ink4)}
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
-  <div class="eyebrow"><i class="fas fa-circle" style="font-size:.35rem"></i>&nbsp; Web Services &amp; Digital Solutions</div>
   <h1>We Build <span class="blue">Digital Products</span><br>That Actually Work</h1>
   <p>Vyom Tech crafts high-quality websites, web apps, and digital solutions for startups, businesses, and individuals who want to stand out.</p>
   <div class="btns">
@@ -425,7 +434,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         <div class="pc-th t2">
           <!-- Add project image here: <img src="images/trackmind-preview.png" alt="TrackMind"> -->
         <img src="images/image.png" alt="TrackMind">
-          <!-- <span>🧠</span> -->
+          <!-- <span><i class="fas fa-brain"></i></span> -->
           <span class="pbg pb-a">AI Tool</span>
         </div>
         <div class="pc-b">
@@ -443,7 +452,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         <div class="pc-th t7">
           <!-- Add project image here: <img src="images/dexmaster-preview.png" alt="DexMaster"> -->
           <img src="images/dx.png" alt="DexMaster">
-          <!-- <span>⚡</span> -->
+          <!-- <span><i class="fas fa-bolt"></i></span> -->
           <span class="pbg pb-o">Web Tool</span>
         </div>
         <div class="pc-b">
@@ -461,7 +470,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         <div class="pc-th t3">
           <!-- Add project image here: <img src="images/vyomworld-preview.png" alt="VyomWorld"> -->
           <img src="images/vim.png" alt="VyomWorld">
-          <!-- <span>🌍</span>/ -->
+          <!-- <span><i class="fas fa-globe"></i></span>/ -->
           <span class="pbg pb-g">Project</span>
         </div>
         <div class="pc-b">
@@ -479,7 +488,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         <div class="pc-th t4">
           <!-- Add project image here: <img src="images/pokebuild-preview.png" alt="Pokebuild"> -->
           <img src="images/pb.png" alt="Pokebuild">
-          <!-- <span>🎮</span> -->
+          <!-- <span><i class="fas fa-gamepad"></i></span> -->
           <span class="pbg pb-o">Web Tool</span>
         </div>
         <div class="pc-b">
@@ -497,7 +506,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
         <div class="pc-th t5">
           <!-- Add project image here: <img src="images/personal-preview.png" alt="Personal Website"> -->
           <img src="images/we.png" alt="Personal Website">
-          <!-- <span>👤</span> -->
+          <!-- <span><i class="fas fa-user"></i></span> -->
           <span class="pbg pb-a">Portfolio</span>
         </div>
         <div class="pc-b">
@@ -514,7 +523,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       <!-- <div class="pc reveal">
         <div class="pc-th t4">
           Add project image here: <img src="images/portfoliobuilder-preview.png" alt="Portfolio Builder">
-          <span>🎓</span>
+          <span><i class="fas fa-graduation-cap"></i></span>
           <span class="pbg pb-w">Web Tool</span>
         </div>
         <div class="pc-b">
@@ -530,9 +539,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       <!-- Coming soon ghost -->
       <div class="ghost reveal" style="display:flex;align-items:center;justify-content:center">
         <div style="text-align:center;padding:1.5rem">
-          <div style="font-size:1.8rem;margin-bottom:.6rem">🚀</div>
-          <p style="font-size:.8rem;color:var(--ink4);line-height:1.6">More projects<br>shipping soon</p>
-        </div>
+          <div style="font-size:1.8rem;margin-bottom:.6rem"><i class="fas fa-rocket"></i></div>
       </div>
 
     </div>
@@ -551,7 +558,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       <div class="feat reveal">
         <!-- Add Ghosh Global image here: <img src="images/gg.png" alt="Ghosh Global" class="feat-th"> -->
         <img src="images/gg.png" alt="Ghosh Global" class="feat-th" onerror="this.style.display='none'">
-        <!-- <div class="feat-th">🌐</div> -->
+        <!-- <div class="feat-th"><i class="fas fa-globe"></i></div> -->
         <div class="feat-b">
           <div class="feat-cl">Client Project</div>
           <h3>Ghosh Global</h3>
@@ -563,7 +570,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       <div class="pc reveal">
         <div class="pc-th t1">
           <!-- Add project image here: <img src="images/ecommerce-preview.png" alt="E-Commerce"> -->
-          <span>🛒</span>
+          <span><i class="fas fa-shopping-cart"></i></span>
           <span class="pbg pb-w">E-Commerce</span>
         </div>
         <div class="pc-b">
@@ -577,7 +584,7 @@ footer p{font-size:0.76rem;color:var(--ink4)}
       </div>
       <div class="ghost reveal" style="display:flex;align-items:center;justify-content:center">
         <div style="text-align:center;padding:1.5rem">
-          <div style="font-size:1.8rem;margin-bottom:.6rem">💼</div>
+          <div style="font-size:1.8rem;margin-bottom:.6rem"><i class="fas fa-briefcase"></i></div>
           <p style="font-size:.8rem;color:var(--ink4);line-height:1.6">Your project<br>could be here</p>
           <a href="#contact" style="display:inline-block;margin-top:.8rem;font-size:.76rem;color:var(--blue);font-weight:500;text-decoration:none">Get in touch →</a>
         </div>
