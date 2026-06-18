@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="images/vyomtechlogo.png">
-<title>Vyoms Tech — Digital Products for the Ambitious</title>
+<title>Vyom Tech</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -48,12 +48,20 @@ img{max-width:100%;display:block}
   padding:0 clamp(1.2rem,5%,3rem);
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
 }
+
+/* IMAGE LOGO */
 .logo{
   display:flex;align-items:center;gap:10px;
   text-decoration:none;flex-shrink:0;
 }
-.logo-icon{height:clamp(34px,4.5vw,44px);width:auto;display:block;object-fit:contain}
-.logo-name{height:clamp(46px,6.5vw,66px);width:auto;display:block;object-fit:contain}
+.logo-icon{
+  height:clamp(34px,4.5vw,44px);
+  width:auto;display:block;object-fit:contain;
+}
+.logo-name{
+  height:clamp(46px,6.5vw,66px);
+  width:auto;display:block;object-fit:contain;
+}
 
 .nav-links{
   display:flex;align-items:center;gap:clamp(1rem,2.5vw,2rem);
@@ -85,6 +93,7 @@ img{max-width:100%;display:block}
 .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
+/* MOB MENU */
 .mob-menu{
   display:none;position:fixed;
   top:var(--nav-h);left:0;right:0;z-index:899;
@@ -141,40 +150,20 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
   background:radial-gradient(circle,rgba(0,113,227,0.055) 0%,transparent 70%);
   top:-30%;left:50%;transform:translateX(-50%);pointer-events:none;
 }
-
-/* ── HERO PILLS ── */
-.hero-pills{
-  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
-  margin-top:1.6rem;margin-bottom:0;
-  animation:fadeUp .7s .35s ease both;
-}
-.pill{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--g1);border:1px solid var(--g2);
-  border-radius:980px;padding:6px 14px;
-  font-size:0.73rem;font-weight:500;color:var(--ink2);
-}
-.pill i{color:var(--blue);font-size:0.65rem}
-
 .hero h1{
   font-family:'Bricolage Grotesque',sans-serif;
   font-size:clamp(2.1rem,7vw,5.5rem);
   font-weight:800;line-height:1.05;letter-spacing:-2px;
   color:var(--ink);margin-bottom:1.4rem;
   max-width:min(820px,100%);
-  animation:fadeUp .7s .1s ease both;
 }
 .hero h1 .blue{color:var(--blue)}
 .hero-sub{
   font-size:clamp(0.9rem,2.5vw,1.08rem);
   color:var(--ink3);font-weight:300;
-  max-width:min(520px,100%);line-height:1.8;margin-bottom:2.5rem;
-  animation:fadeUp .7s .2s ease both;
+  max-width:min(500px,100%);line-height:1.8;margin-bottom:2.5rem;
 }
-.btns{
-  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
-  animation:fadeUp .7s .3s ease both;
-}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .btn-p{
   background:var(--blue);color:#fff;
   padding:clamp(0.65rem,2vw,0.78rem) clamp(1.4rem,4vw,1.9rem);
@@ -193,19 +182,10 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
   transition:all .2s;display:inline-block;
 }
 .btn-s:hover{background:var(--g2)}
-
-/* ── HERO TRUST BAR ── */
-.trust-bar{
-  margin-top:3.5rem;border-top:1px solid var(--g2);padding-top:2.5rem;
-  animation:fadeUp .7s .4s ease both;
-}
-.trust-label{
-  font-size:0.68rem;font-weight:500;letter-spacing:0.08em;
-  text-transform:uppercase;color:var(--ink4);margin-bottom:1.4rem;
-}
 .stats{
   display:flex;gap:clamp(1.5rem,5vw,3.5rem);
-  flex-wrap:wrap;justify-content:center;
+  margin-top:3.5rem;border-top:1px solid var(--g2);
+  padding-top:2.5rem;flex-wrap:wrap;justify-content:center;
 }
 .stat-num{
   font-family:'Bricolage Grotesque',sans-serif;
@@ -214,45 +194,40 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .stat-lbl{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4);margin-top:2px;text-align:center}
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(16px)}
-  to{opacity:1;transform:none}
-}
-
-/* ── WHY US (replaces generic about) ── */
-.whyus{background:var(--g1)}
-.whyus-g{
+/* ── ABOUT ── */
+.about{background:var(--g1)}
+.about-g{
   display:grid;grid-template-columns:1fr 1fr;
   gap:clamp(2rem,6vw,5rem);align-items:start;
 }
-.why-list{margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
-.why-item{
-  display:flex;align-items:flex-start;gap:0.9rem;
-  background:var(--w);border:1px solid rgba(0,0,0,0.06);
-  border-radius:12px;padding:1rem 1.2rem;
-  transition:box-shadow .25s;
+.astats{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(0.6rem,2vw,1rem);margin-top:2rem;
 }
-.why-item:hover{box-shadow:0 6px 24px rgba(0,0,0,0.07)}
-.why-ic{
-  width:34px;height:34px;border-radius:9px;flex-shrink:0;
-  background:rgba(0,113,227,0.08);color:var(--blue);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.88rem;margin-top:2px;
+.ast{
+  background:var(--w);border-radius:var(--r);
+  padding:clamp(1rem,3vw,1.5rem);
+  border:1px solid rgba(0,0,0,0.06);
 }
-.why-item h4{
-  font-size:0.88rem;font-weight:600;color:var(--ink);margin-bottom:3px;
+.ast-n{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;
+  letter-spacing:-1px;color:var(--ink);
 }
-.why-item p{font-size:0.78rem;color:var(--ink3);line-height:1.6;font-weight:300}
-
+.ast-l{font-size:clamp(0.68rem,2vw,0.78rem);color:var(--ink3);margin-top:3px}
 .acard{
   background:var(--w);border-radius:20px;
   border:1px solid rgba(0,0,0,0.07);
   padding:clamp(1.4rem,4vw,2.2rem);
   box-shadow:0 4px 32px rgba(0,0,0,0.05);
 }
-.acard-logo{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+.acard-logo{
+  display:flex;align-items:center;gap:8px;
+  margin-bottom:1rem;
+}
 .acard-logo img.acard-logo-icon{height:26px;width:auto;object-fit:contain}
 .acard-logo img.acard-logo-name{height:16px;width:auto;object-fit:contain}
+
 .acard p{font-size:clamp(0.82rem,2vw,0.9rem);color:var(--ink3);line-height:1.75;margin-bottom:1.2rem;font-weight:300}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{
@@ -262,51 +237,25 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
   border:1px solid var(--g2);font-weight:500;
 }
 
-/* ── IDEAL FOR (audience section) ── */
-.audience{background:var(--w)}
-.aud-g{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:clamp(0.8rem,2vw,1.2rem);margin-top:2.5rem;
-}
-.aud-card{
-  border-radius:16px;padding:clamp(1.4rem,3vw,1.8rem);
-  border:1px solid rgba(0,0,0,0.07);
-  transition:all .3s;background:var(--g1);
-}
-.aud-card:hover{
-  background:var(--w);
-  box-shadow:0 10px 36px rgba(0,0,0,0.08);
-  transform:translateY(-3px);
-}
-.aud-ic{
-  width:44px;height:44px;border-radius:12px;
-  background:rgba(0,113,227,0.08);color:var(--blue);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;margin-bottom:1rem;
-}
-.aud-card h3{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.4rem;
-}
-.aud-card p{font-size:0.8rem;color:var(--ink3);line-height:1.65;font-weight:300}
-
 /* ── SERVICES ── */
-.services{background:var(--g1)}
+.services{background:var(--w)}
 .srv-g{
-  display:grid;grid-template-columns:repeat(3,1fr);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:clamp(0.8rem,2vw,1.2rem);margin-top:2.5rem;
 }
 .srv{
-  background:var(--w);border-radius:var(--r);
+  background:var(--g1);border-radius:var(--r);
   padding:clamp(1.2rem,3vw,1.8rem);
-  border:1px solid rgba(0,0,0,0.06);transition:all .3s;
+  border:1px solid transparent;transition:all .3s;
 }
 .srv:hover{
+  background:var(--w);border-color:rgba(0,0,0,0.08);
   box-shadow:0 8px 30px rgba(0,0,0,0.07);transform:translateY(-3px);
 }
 .srv-ic{
   width:42px;height:42px;border-radius:11px;
-  background:rgba(0,113,227,0.07);
+  background:var(--w);border:1px solid rgba(0,0,0,0.07);
   display:flex;align-items:center;justify-content:center;
   font-size:1.1rem;color:var(--blue);margin-bottom:1rem;flex-shrink:0;
 }
@@ -322,7 +271,7 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
   background:rgba(0,113,227,0.08);color:var(--blue);font-weight:500;
 }
 
-/* ── WORKS ── */
+/* ── WORKS SECTIONS ── */
 .works-a{
   background:var(--w);
   padding:clamp(3.5rem,8vw,6rem) clamp(1.2rem,5%,3rem) clamp(1.5rem,4vw,2.5rem);
@@ -340,8 +289,10 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 .wb-bl{background:rgba(0,113,227,0.08);color:var(--blue)}
 .wb-pu{background:rgba(108,53,222,0.09);color:#6c35de}
 
+/* PROJECT GRID */
 .pg{
-  display:grid;grid-template-columns:repeat(3,1fr);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:clamp(0.7rem,2vw,1rem);margin-top:2rem;
 }
 .pc{
@@ -361,7 +312,8 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
   background:var(--g2);
 }
 .pc-th img{
-  width:100%;height:100%;object-fit:cover;display:block;
+  width:100%;height:100%;
+  object-fit:cover;display:block;
   transition:transform .4s ease;
 }
 .pc:hover .pc-th img{transform:scale(1.04)}
@@ -398,6 +350,7 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .pl:hover{gap:7px}
 
+/* FEATURED */
 .feat{
   grid-column:1/-1;
   background:var(--w);border:1px solid rgba(0,0,0,0.07);
@@ -437,6 +390,7 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .fb:hover{background:var(--blue2)}
 
+/* GHOST */
 .ghost{
   background:transparent;
   border:1.5px dashed var(--g2);
@@ -446,42 +400,8 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .ghost:hover{border-color:var(--blue)}
 
-/* ── PROCESS ── */
-.process{background:var(--g1)}
-.proc-g{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:clamp(0.8rem,2vw,1.2rem);margin-top:2.5rem;
-  position:relative;
-}
-.proc-g::before{
-  content:'';position:absolute;
-  top:22px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);
-  height:1px;background:var(--g3);z-index:0;
-}
-.proc-step{
-  background:var(--w);border-radius:14px;
-  padding:clamp(1rem,3vw,1.4rem);
-  border:1px solid rgba(0,0,0,0.06);
-  position:relative;z-index:1;
-  transition:all .3s;
-}
-.proc-step:hover{box-shadow:0 8px 28px rgba(0,0,0,0.07);transform:translateY(-3px)}
-.proc-num{
-  font-family:'DM Mono',monospace;
-  font-size:0.7rem;font-weight:500;
-  color:var(--blue);background:rgba(0,113,227,0.09);
-  width:36px;height:36px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:0.9rem;
-}
-.proc-step h4{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.35rem;
-}
-.proc-step p{font-size:0.76rem;color:var(--ink3);line-height:1.6;font-weight:300}
-
 /* ── FOUNDER ── */
-.founder{background:var(--w)}
+.founder{background:var(--g1)}
 .founder-g{
   max-width:1160px;margin:0 auto;
   display:grid;grid-template-columns:clamp(180px,25%,280px) 1fr;
@@ -508,13 +428,13 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 .fsk{
   font-size:clamp(0.68rem,2vw,0.76rem);
   padding:5px 13px;border-radius:980px;
-  background:var(--g1);color:var(--ink2);
+  background:var(--w);color:var(--ink2);
   font-weight:500;border:1px solid var(--g2);
 }
 .fsocs{display:flex;gap:8px;flex-wrap:wrap}
 .fsoc{
   display:flex;align-items:center;gap:6px;
-  background:var(--g1);border:1px solid var(--g2);
+  background:var(--w);border:1px solid var(--g2);
   border-radius:980px;padding:0.5rem 1rem;
   text-decoration:none;color:var(--ink2);
   font-size:clamp(0.72rem,2vw,0.8rem);font-weight:500;
@@ -524,14 +444,13 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 .fsoc i{font-size:0.85rem}
 
 /* ── CONTACT ── */
-.contact{background:var(--g1)}
+.contact{background:var(--w)}
 .contact-in{max-width:700px;margin:0 auto;text-align:center}
 .ccard{
-  background:var(--w);border-radius:20px;
+  background:var(--g1);border-radius:20px;
   border:1px solid rgba(0,0,0,0.06);
   padding:clamp(1.5rem,5vw,2.5rem) clamp(1.2rem,4vw,2rem);
   margin-top:2.5rem;
-  box-shadow:0 4px 24px rgba(0,0,0,0.04);
 }
 .sc-g{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -539,7 +458,7 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .sb2{
   display:flex;align-items:center;justify-content:center;gap:7px;
-  background:var(--g1);border:1px solid var(--g2);
+  background:var(--w);border:1px solid var(--g2);
   border-radius:10px;padding:clamp(0.55rem,2vw,0.72rem) 0.5rem;
   text-decoration:none;color:var(--ink2);
   font-size:clamp(0.72rem,2vw,0.8rem);font-weight:500;
@@ -551,8 +470,8 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 
 /* ── FOOTER ── */
 footer{
-  background:var(--ink);border-top:1px solid rgba(255,255,255,0.08);
-  padding:clamp(1.4rem,3vw,2rem) clamp(1.2rem,5%,3rem);
+  background:var(--g1);border-top:1px solid var(--g2);
+  padding:clamp(1.2rem,3vw,1.8rem) clamp(1.2rem,5%,3rem);
   display:flex;align-items:center;
   justify-content:space-between;flex-wrap:wrap;gap:1rem;
 }
@@ -560,16 +479,16 @@ footer{
   display:flex;align-items:center;gap:7px;
   text-decoration:none;
 }
-.flogo-icon{height:30px;width:auto;object-fit:contain;display:block;filter:brightness(10)}
-.flogo-name{height:42px;width:auto;object-fit:contain;display:block;filter:brightness(10)}
+.flogo-icon{height:30px;width:auto;object-fit:contain;display:block}
+.flogo-name{height:42px;width:auto;object-fit:contain;display:block}
 
-footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
+footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4)}
 .fnav{display:flex;gap:clamp(0.8rem,3vw,1.5rem);flex-wrap:wrap}
 .fnav a{
   font-size:clamp(0.66rem,2vw,0.76rem);
-  color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;
+  color:var(--ink3);text-decoration:none;transition:color .2s;
 }
-.fnav a:hover{color:#fff}
+.fnav a:hover{color:var(--ink)}
 
 /* ── SCROLL BTN ── */
 #scrollBtn{
@@ -587,16 +506,17 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on{opacity:1;transform:none}
 
-/* ══ RESPONSIVE ══ */
+/* ══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════════ */
+
+/* Tablet — ≤ 900px */
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none}
   .ham{display:flex}
   .hero h1{letter-spacing:-1.5px}
-  .whyus-g{grid-template-columns:1fr;gap:2.5rem}
-  .aud-g{grid-template-columns:1fr 1fr}
+  .about-g{grid-template-columns:1fr;gap:2.5rem}
   .srv-g{grid-template-columns:repeat(2,1fr)}
-  .proc-g{grid-template-columns:repeat(2,1fr)}
-  .proc-g::before{display:none}
   .pg{grid-template-columns:repeat(2,1fr)}
   .feat{grid-template-columns:1fr}
   .feat-th{min-height:200px}
@@ -606,21 +526,24 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
   .fskills{justify-content:center}
   .frole{text-align:center}
 }
+
+/* Large Mobile — ≤ 640px */
 @media(max-width:640px){
   .hero h1{letter-spacing:-1px}
   .btns{flex-direction:column;align-items:center;gap:10px}
   .btn-p,.btn-s{width:100%;max-width:280px;text-align:center}
   .stats{gap:1.4rem}
-  .aud-g{grid-template-columns:1fr}
   .srv-g{grid-template-columns:1fr}
-  .proc-g{grid-template-columns:1fr 1fr}
   .pg{grid-template-columns:1fr}
   .feat{grid-template-columns:1fr}
   .feat-th{min-height:180px}
+  .works-b .pg{grid-template-columns:1fr}
   .sc-g{grid-template-columns:repeat(2,1fr)}
   footer{flex-direction:column;align-items:center;text-align:center}
   .fnav{justify-content:center}
 }
+
+/* Small Mobile — ≤ 420px */
 @media(max-width:420px){
   :root{--nav-h:60px}
   .hero h1{font-size:1.9rem;letter-spacing:-0.5px}
@@ -631,9 +554,13 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
   .founder-g{gap:1.5rem}
   .favatar{width:140px;height:140px;font-size:2.2rem}
   .fsoc{padding:0.4rem 0.8rem;font-size:0.68rem}
-  .proc-g{grid-template-columns:1fr}
+  .fsoc i{font-size:0.78rem}
+
+  /* ✅ LOGO FIX — mobile pe bada */
   .logo-icon{height:44px}
-  .logo-name{height:60px;margin-left:-20px}
+  .logo-name{height: 60px;
+  margin-left: -20px;
+}
 }
 </style>
 </head>
@@ -643,17 +570,17 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
 <nav class="navbar">
   <div class="nav-inner">
     <a href="#home" class="logo">
-      <img src="images/vyomtechlogo.png" alt="Vyoms Tech Logo" class="logo-icon">
-      <img src="images/vyomtechname.png" alt="Vyoms Tech" class="logo-name">
+      <img src="images/vyomtechlogo.png" alt="Vyom Tech Logo" class="logo-icon">
+      <img src="images/vyomtechname.png" alt="Vyom Tech" class="logo-name">
     </a>
     <ul class="nav-links">
-      <li><a href="#why">Why Us</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#works">Work</a></li>
+      <li><a href="#works">Projects</a></li>
       <li><a href="#founder">Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Start a Project</a>
+    <a href="#contact" class="nav-cta">Hire Us</a>
     <button class="ham" id="ham" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -661,112 +588,56 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
 </nav>
 
 <div class="mob-menu" id="mobMenu">
-  <a href="#why">Why Us</a>
+  <a href="#about">About</a>
   <a href="#services">Services</a>
-  <a href="#works">Work</a>
+  <a href="#works">Projects</a>
   <a href="#founder">Team</a>
   <a href="#contact">Contact</a>
-  <a href="#contact" class="mob-cta">Start a Project</a>
+  <a href="#contact" class="mob-cta">Hire Us</a>
 </div>
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <h1>We Build Software<br><span class="blue">Startups Actually Ship.</span></h1>
-  <p class="hero-sub">Full-stack development for founders, small businesses, and builders who need it done right — without big agency timelines or bills.</p>
+  <h1>We Build <span class="blue">Digital Products</span><br>That Actually Work</h1>
+  <p class="hero-sub">Vyom Tech crafts high-quality websites, web apps, and digital solutions for startups, businesses, and individuals who want to stand out.</p>
   <div class="btns">
     <a href="#works" class="btn-p">See Our Work &nbsp;→</a>
-    <a href="#contact" class="btn-s">Start a Project</a>
+    <a href="#contact" class="btn-s">Get In Touch</a>
   </div>
-  <div class="hero-pills">
-    <span class="pill"><i class="fas fa-check"></i> MVP to production in weeks</span>
-    <span class="pill"><i class="fas fa-check"></i> Direct access to the developer</span>
-    <span class="pill"><i class="fas fa-check"></i> Startup-friendly pricing</span>
-  </div>
-  <div class="trust-bar">
-    <div class="trust-label">What we've shipped so far</div>
-    <div class="stats">
-      <div><div class="stat-num">10+</div><div class="stat-lbl">Projects Shipped</div></div>
-      <div><div class="stat-num">5+</div><div class="stat-lbl">Clients Served</div></div>
-      <div><div class="stat-num">Full</div><div class="stat-lbl">Stack Capable</div></div>
-      <div><div class="stat-num">Fast</div><div class="stat-lbl">Turnaround</div></div>
-    </div>
+  <div class="stats">
+    <div><div class="stat-num">10+</div><div class="stat-lbl">Projects Done</div></div>
+    <div><div class="stat-num">5+</div><div class="stat-lbl">Happy Clients</div></div>
+    <div><div class="stat-num">3+</div><div class="stat-lbl">Tech Stacks</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-lbl">Commitment</div></div>
   </div>
 </section>
 
-<!-- ══ WHY VYOMS TECH ══ -->
-<section class="whyus" id="why">
+<!-- ══ ABOUT ══ -->
+<section class="about" id="about">
   <div class="wrap">
-    <div class="whyus-g">
+    <div class="about-g">
       <div class="reveal">
-        <div class="chip">Why Vyoms Tech</div>
-        <h2 class="sh">We work like a<br>team of 10 —<br>without the overhead.</h2>
-        <p class="sb">You get senior-level thinking, fast execution, and a direct line to the person building your product. No middlemen. No inflated agency bills.</p>
-        <div class="why-list">
-          <div class="why-item reveal">
-            <div class="why-ic"><i class="fas fa-bolt"></i></div>
-            <div>
-              <h4>Fast delivery, no hand-holding needed</h4>
-              <p>We scope your project clearly, move fast, and keep you updated — without back-and-forth delays.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-ic"><i class="fas fa-code-branch"></i></div>
-            <div>
-              <h4>Full stack, actually full stack</h4>
-              <p>Frontend, backend, deployment, AI — we handle the entire chain so nothing falls through the cracks.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-ic"><i class="fas fa-wallet"></i></div>
-            <div>
-              <h4>Startup-friendly pricing</h4>
-              <p>Serious quality without the agency markup. Fair, transparent pricing — whether you're bootstrapped or funded.</p>
-            </div>
-          </div>
+        <div class="chip">About Vyom Tech</div>
+        <h2 class="sh">Code. Create.<br>Deliver.</h2>
+        <p class="sb">Vyom Tech is a technology startup delivering modern web services — from pixel-perfect websites to full-stack applications. We combine clean engineering with thoughtful design to build products that perform.</p>
+        <div class="astats">
+          <div class="ast reveal"><div class="ast-n">10+</div><div class="ast-l">Projects Completed</div></div>
+          <div class="ast reveal"><div class="ast-n">5+</div><div class="ast-l">Satisfied Clients</div></div>
+          <div class="ast reveal"><div class="ast-n">2024</div><div class="ast-l">Founded</div></div>
+          <div class="ast reveal"><div class="ast-n">India</div><div class="ast-l">Based In</div></div>
         </div>
       </div>
       <div class="acard reveal">
         <div class="acard-logo">
-          <img src="images/vyomtechlogo.png" alt="Vyoms Tech Logo" class="acard-logo-icon">
-          <img src="images/vyomtechname.png" alt="Vyoms Tech" class="acard-logo-name">
+          <img src="images/vyomtechlogo.png" alt="Vyom Tech Logo" class="acard-logo-icon">
+          <img src="images/vyomtechname.png" alt="Vyom Tech" class="acard-logo-name">
         </div>
-        <p>Vyoms Tech is a lean product studio founded in 2024. We partner with early-stage startups, growing businesses, and individuals who have a clear vision and want it built right — not just fast.<br><br>From a rough idea to a polished, deployed product — we own the process end to end and take responsibility for the outcome.</p>
+        <p>We are a lean, focused startup that takes your idea from concept to a live, working product. Whether it's a landing page, a complex web app, or an AI-powered tool — we build it right.</p>
         <div class="tags">
-          <span class="tag">Web Development</span>
-          <span class="tag">Full Stack</span>
-          <span class="tag">AI Integration</span>
-          <span class="tag">Mobile Apps</span>
-          <span class="tag">UI / UX</span>
-          <span class="tag">Deployment</span>
+          <span class="tag">Web Development</span><span class="tag">Full Stack</span>
+          <span class="tag">AI Integration</span><span class="tag">UI / UX</span>
+          <span class="tag">Deployment</span><span class="tag">Freelance</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHO WE BUILD FOR ══ -->
-<section class="audience" id="audience">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="chip">Who We Build For</div>
-      <h2 class="sh">The right fit for<br>the right client.</h2>
-      <p class="sb">We work best with people who have something real to build and want a team they can trust.</p>
-    </div>
-    <div class="aud-g">
-      <div class="aud-card reveal">
-        <div class="aud-ic"><i class="fas fa-rocket"></i></div>
-        <h3>Early-Stage Startups</h3>
-        <p>You have a validated idea and need an MVP fast. We scope it tight, build it clean, and ship before your runway runs thin.</p>
-      </div>
-      <div class="aud-card reveal">
-        <div class="aud-ic"><i class="fas fa-building"></i></div>
-        <h3>Small Businesses</h3>
-        <p>You need a web presence that actually converts — not a template site. We build websites that represent your brand properly.</p>
-      </div>
-      <div class="aud-card reveal">
-        <div class="aud-ic"><i class="fas fa-user-astronaut"></i></div>
-        <h3>Individuals & Freelancers</h3>
-        <p>Portfolio, tool, or passion project — we'll build it with the same quality we'd give any paying client. Because we take pride in the work.</p>
       </div>
     </div>
   </div>
@@ -777,90 +648,57 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
   <div class="wrap">
     <div class="reveal">
       <div class="chip">What We Do</div>
-      <h2 class="sh">Services built<br>for real projects.</h2>
-      <p class="sb">Not a menu of services — a set of capabilities we deploy together to ship complete products.</p>
+      <h2 class="sh">Our Services</h2>
+      <p class="sb">Everything you need to build, launch, and grow your digital presence.</p>
     </div>
     <div class="srv-g">
       <div class="srv reveal">
         <div class="srv-ic"><i class="fas fa-code"></i></div>
         <h3>Web Development</h3>
-        <p>Custom, responsive websites built to perform. Fast loading, mobile-first, clean code — not templates dressed up.</p>
-        <div class="stags"><span class="stag">HTML/CSS</span><span class="stag">JavaScript</span><span class="stag">React</span></div>
+        <p>Custom, responsive websites built to perform. Fast loading, mobile-first, clean code from the ground up.</p>
+        <div class="stags"><span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span><span class="stag">React</span></div>
       </div>
       <div class="srv reveal">
         <div class="srv-ic"><i class="fas fa-layer-group"></i></div>
         <h3>Full Stack Apps</h3>
-        <p>End-to-end web applications with robust APIs, databases, and auth — from concept to production deployment.</p>
-        <div class="stags"><span class="stag">Node.js</span><span class="stag">FastAPI</span><span class="stag">MongoDB</span><span class="stag">REST</span></div>
-      </div>
-      <div class="srv reveal">
-        <div class="srv-ic"><i class="fas fa-mobile-alt"></i></div>
-        <h3>Mobile Apps</h3>
-        <p>Cross-platform mobile apps that feel native — built with React Native for iOS and Android from a single codebase.</p>
-        <div class="stags"><span class="stag">React Native</span><span class="stag">Expo</span><span class="stag">iOS</span><span class="stag">Android</span></div>
+        <p>End-to-end web applications with robust APIs, databases, and authentication — concept to deployment.</p>
+        <div class="stags"><span class="stag">Node.js</span><span class="stag">MongoDB</span><span class="stag">Express</span><span class="stag">REST API</span></div>
       </div>
       <div class="srv reveal">
         <div class="srv-ic"><i class="fas fa-robot"></i></div>
         <h3>AI Integration</h3>
-        <p>Add intelligent features — chatbots, smart automation, and AI-powered workflows — directly into your product.</p>
+        <p>Add intelligent features — chatbots, smart automation, and AI-powered workflows to your products.</p>
         <div class="stags"><span class="stag">OpenAI</span><span class="stag">Claude API</span><span class="stag">Automation</span></div>
       </div>
       <div class="srv reveal">
         <div class="srv-ic"><i class="fas fa-pencil-ruler"></i></div>
         <h3>UI / UX Design</h3>
-        <p>Clean, intuitive interfaces users actually enjoy. Designed for clarity and conversion — aesthetics meeting function.</p>
+        <p>Clean, intuitive interfaces users love. Designed for clarity and conversion — aesthetics meet function.</p>
         <div class="stags"><span class="stag">Figma</span><span class="stag">Responsive</span><span class="stag">Prototyping</span></div>
       </div>
       <div class="srv reveal">
         <div class="srv-ic"><i class="fas fa-cloud-upload-alt"></i></div>
-        <h3>Deployment & Hosting</h3>
-        <p>We get your product live — domain, cloud, SSL, CI/CD — and keep it running. You focus on growing, not ops.</p>
-        <div class="stags"><span class="stag">Vercel</span><span class="stag">Railway</span><span class="stag">AWS</span></div>
+        <h3>Deployment &amp; Hosting</h3>
+        <p>We get your product live and keep it running. Domain, cloud, SSL, and ongoing support included.</p>
+        <div class="stags"><span class="stag">Vercel</span><span class="stag">Netlify</span><span class="stag">AWS</span></div>
+      </div>
+      <div class="srv reveal">
+        <div class="srv-ic"><i class="fas fa-handshake"></i></div>
+        <h3>Freelance &amp; Consulting</h3>
+        <p>Flexible project-based or retainer engagements for students, startups, and businesses of all sizes.</p>
+        <div class="stags"><span class="stag">Project-based</span><span class="stag">Fast delivery</span><span class="stag">Affordable</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ PROCESS ══ -->
-<section class="process">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="chip">How We Work</div>
-      <h2 class="sh">Simple process.<br>Serious results.</h2>
-      <p class="sb">No chaos, no surprises. A clear four-step workflow from your first message to a live product.</p>
-    </div>
-    <div class="proc-g">
-      <div class="proc-step reveal">
-        <div class="proc-num">01</div>
-        <h4>Discovery Call</h4>
-        <p>We understand your goal, scope, and timeline. Free consultation — no commitment needed.</p>
-      </div>
-      <div class="proc-step reveal">
-        <div class="proc-num">02</div>
-        <h4>Scope & Quote</h4>
-        <p>We break down exactly what we'll build, the timeline, and a transparent price. No hidden costs.</p>
-      </div>
-      <div class="proc-step reveal">
-        <div class="proc-num">03</div>
-        <h4>Build & Review</h4>
-        <p>We build in sprints with regular updates. You review, we iterate — until it's right.</p>
-      </div>
-      <div class="proc-step reveal">
-        <div class="proc-num">04</div>
-        <h4>Launch & Support</h4>
-        <p>We deploy your product and stay available for feedback, fixes, and future features.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BY VYOMS TECH ══ -->
+<!-- ══ BY VYOM TECH ══ -->
 <section class="works-a" id="works">
   <div class="wrap">
     <div class="reveal">
-      <span class="wbadge wb-bl">By Vyoms Tech</span>
+      <span class="wbadge wb-bl">By Vyom Tech</span>
       <h2 class="sh" style="margin-top:.8rem">Built by us,<br>for the world.</h2>
-      <p class="sb">Open tools, experiments, and personal projects shipped under the Vyoms Tech banner.</p>
+      <p class="sb">Open tools, experiments, and personal projects shipped under the Vyom Tech banner.</p>
     </div>
     <div class="pg">
 
@@ -873,7 +711,7 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
           <h3>GateHub</h3>
           <p>A notes library for engineering students — any type of notes available in one organized place.</p>
           <div class="pc-f">
-            <div class="pst"><span class="ps">React Native</span><span class="ps">FastAPI</span></div>
+            <div class="pst"><span class="ps">Web App</span><span class="ps">JS</span></div>
             <a href="https://projectalps.netlify.app" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -901,7 +739,7 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
         </div>
         <div class="pc-b">
           <h3>DexMaster</h3>
-          <p>A feature-rich Pokédex explorer — browse, search, and discover detailed Pokémon data with a clean fast interface.</p>
+          <p>A feature-rich explorer — browse, search, and discover detailed data with a clean fast interface.</p>
           <div class="pc-f">
             <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
             <a href="https://amanmehta276.github.io/DexMasters/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
@@ -912,13 +750,13 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
       <div class="pc reveal">
         <div class="pc-th">
           <img src="images/vim.png" alt="VyomWorld" onerror="this.style.display='none'">
-          <span class="pbg pb-g">Game</span>
+          <span class="pbg pb-g">Project</span>
         </div>
         <div class="pc-b">
           <h3>VyomWorld</h3>
-          <p>A Pokémon-style browser battle game with type effectiveness, damage formulas, and an AI opponent.</p>
+          <p>An immersive world-building web experience — explore the Vyom Tech universe in a creative format.</p>
           <div class="pc-f">
-            <div class="pst"><span class="ps">HTML</span><span class="ps">FastAPI</span><span class="ps">JS</span></div>
+            <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
             <a href="https://amanmehta276.github.io/VyomWorld/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -931,7 +769,7 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
         </div>
         <div class="pc-b">
           <h3>Pokebuild</h3>
-          <p>Build and customize your perfect Pokémon team — a fun, interactive web tool for fans and strategists.</p>
+          <p>Build and customize your perfect team — a fun, interactive web tool for fans and strategists.</p>
           <div class="pc-f">
             <div class="pst"><span class="ps">HTML</span><span class="ps">CSS</span><span class="ps">JS</span></div>
             <a href="https://amanmehta276.github.io/Pokebuild/" target="_blank" class="pl">Visit <i class="fas fa-arrow-right"></i></a>
@@ -969,8 +807,8 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
 <section class="works-b">
   <div class="wrap">
     <div style="border-top:1px solid var(--g2);padding-top:clamp(2.5rem,6vw,4rem)" class="reveal">
-      <span class="wbadge wb-pu">Vyoms Tech for Clients</span>
-      <h2 class="sh" style="margin-top:.8rem">Real work,<br>real businesses.</h2>
+      <span class="wbadge wb-pu">Vyom Tech for Clients</span>
+      <h2 class="sh" style="margin-top:.8rem">Work we've done<br>for real businesses.</h2>
       <p class="sb">Client builds and bespoke digital products delivered end-to-end.</p>
     </div>
     <div class="pg">
@@ -981,7 +819,7 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
         <div class="feat-b">
           <div class="feat-cl">Client Project</div>
           <h3>Ghosh Global</h3>
-          <p>A full-scale web presence for Ghosh Global — built with performance, clarity, and brand identity at the core. From design to deployment, delivered end-to-end by Vyoms Tech.</p>
+          <p>A full-scale web presence for Ghosh Global — built with performance, clarity, and brand identity at the core. From design to deployment, delivered end-to-end by Vyom Tech.</p>
           <div class="fst">
             <span class="ps">React</span><span class="ps">Node.js</span>
             <span class="ps">Tailwind</span><span class="ps">Vercel</span>
@@ -1022,18 +860,18 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
     <div class="reveal" style="display:flex;justify-content:center">
       <div class="favatar">
         <img src="images/AMAN.jpeg" alt="Aman Mehta"
-          onerror="this.outerHTML='<span style=\'font-family:Bricolage Grotesque,sans-serif;font-weight:800;font-size:3rem;color:#0071e3\'>AM</span>'">
+          onerror="this.outerHTML='<div class=\'favatar\' style=\'display:flex;align-items:center;justify-content:center\'>AM</div>'">
       </div>
     </div>
     <div class="reveal">
       <div class="chip">Meet the Founder</div>
       <h2 class="sh">Aman Mehta</h2>
-      <div class="frole">Software Engineer &amp; Founder, Vyoms Tech</div>
-      <p class="fbio">Aman started Vyoms Tech with a simple belief: great software should be accessible to everyone — not just companies with big budgets. As a final-year engineering student who has shipped real products for real clients, he combines academic depth with hands-on execution. When you work with Vyoms Tech, you're working directly with the person who writes the code.</p>
+      <div class="frole">Software Engineer &amp; Founder, Vyom Tech</div>
+      <p class="fbio">Aman is the mind behind Vyom Tech — a developer who believes great software should be both powerful and beautiful. With hands-on experience across the full stack and a passion for building things that matter, he started Vyom Tech to deliver quality digital solutions to clients of all sizes.</p>
       <div class="fskills">
-        <span class="fsk">React</span><span class="fsk">React Native</span><span class="fsk">FastAPI</span>
-        <span class="fsk">Node.js</span><span class="fsk">Python</span><span class="fsk">MongoDB</span>
-        <span class="fsk">AI / LLMs</span><span class="fsk">UI Design</span><span class="fsk">Deployment</span>
+        <span class="fsk">React</span><span class="fsk">Node.js</span><span class="fsk">MongoDB</span>
+        <span class="fsk">Python</span><span class="fsk">AI / ML</span><span class="fsk">UI Design</span>
+        <span class="fsk">Cloud Deployment</span>
       </div>
       <div class="fsocs">
         <a href="https://github.com/amanmehta276" class="fsoc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -1050,17 +888,17 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
   <div class="contact-in">
     <div class="reveal">
       <div class="chip">Get In Touch</div>
-      <h2 class="sh">Have a project?<br>Let's talk.</h2>
-      <p class="sb" style="margin:0 auto">No lengthy forms. Just reach out directly — we typically respond within a few hours.</p>
+      <h2 class="sh">Let's Build Something<br>Great Together</h2>
+      <p class="sb" style="margin:0 auto">Have a project in mind? Reach out through any channel — we'd love to connect.</p>
     </div>
     <div class="ccard reveal">
       <div class="sc-g">
+        <a href="https://github.com/amanmehta276" class="sb2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/aman-mehta-782334281/" class="sb2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://instagram.com/world_of_snap_" class="sb2" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
         <a href="https://wa.me/919770240528" class="sb2" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="mailto:snapaman276@gmail.com" class="sb2"><i class="fas fa-envelope"></i> Email</a>
         <a href="tel:+919770240528" class="sb2"><i class="fas fa-phone"></i> Call</a>
-        <a href="https://www.linkedin.com/in/aman-mehta-782334281/" class="sb2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/amanmehta276" class="sb2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://instagram.com/world_of_snap_" class="sb2" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
       <p class="cloc">
         <i class="fas fa-location-dot" style="margin-right:5px;color:var(--blue)"></i>
@@ -1073,12 +911,12 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:rgba(255,255,255,0.4)}
 <!-- ══ FOOTER ══ -->
 <footer>
   <a href="#home" class="flogo">
-    <img src="images/vyomtechlogo.png" alt="Vyoms Tech Logo" class="flogo-icon">
-    <img src="images/vyomtechname.png" alt="Vyoms Tech" class="flogo-name">
+    <img src="images/vyomtechlogo.png" alt="Vyom Tech Logo" class="flogo-icon">
+    <img src="images/vyomtechname.png" alt="Vyom Tech" class="flogo-name">
   </a>
-  <p>© 2025 Vyoms Tech. All rights reserved.</p>
+  <p>© 2025 Vyom Tech. All rights reserved.</p>
   <nav class="fnav">
-    <a href="#why">Why Us</a>
+    <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#works">Work</a>
     <a href="#founder">Team</a>
