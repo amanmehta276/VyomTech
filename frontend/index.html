@@ -145,65 +145,99 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 }
 .sb{font-size:clamp(0.88rem,2vw,0.97rem);color:var(--ink3);line-height:1.8;font-weight:400;max-width:460px}
 
-/* ── HERO ── FIX: Clear focal point — h1 is the anchor, value prop immediately below ── */
+/* ── HERO ── */
 .hero{
   min-height:100vh;
-  padding:calc(var(--nav-h) + clamp(3rem,8vw,5rem)) clamp(1.2rem,5%,3rem) clamp(3rem,6vw,5rem);
-  display:flex;flex-direction:column;align-items:center;
-  justify-content:center;text-align:center;
+  padding:calc(var(--nav-h) + clamp(2rem,6vw,4rem)) clamp(1.2rem,5%,3rem) clamp(3rem,6vw,5rem);
+  display:flex;align-items:center;
   position:relative;overflow:hidden;
 }
 .hero::before{
   content:'';position:absolute;
   width:min(900px,130vw);height:min(700px,100vw);
   border-radius:50%;
-  background:radial-gradient(circle,rgba(0,91,191,0.06) 0%,transparent 70%);
-  top:-30%;left:50%;transform:translateX(-50%);pointer-events:none;
+  background:radial-gradient(circle,rgba(0,91,191,0.05) 0%,transparent 70%);
+  top:-30%;right:-10%;pointer-events:none;
 }
-
-/* FIX: Visual Hierarchy — eyebrow label above h1 to orient user immediately */
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:0.72rem;font-weight:700;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--blue);
-  background:rgba(0,91,191,0.09);
-  padding:6px 16px;border-radius:980px;
-  margin-bottom:1.4rem;
+.hero-inner{
+  max-width:1160px;width:100%;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(2rem,5vw,5rem);align-items:center;
 }
-.hero-eyebrow .dot{
-  width:6px;height:6px;border-radius:50%;
-  background:var(--blue);animation:pulse 2s infinite;
+/* LEFT — text */
+.hero-left{
+  display:flex;flex-direction:column;
+  align-items:flex-start;text-align:left;
 }
-@keyframes pulse{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:0.5;transform:scale(0.7)}
-}
-
 .hero h1{
   font-family:'Bricolage Grotesque',sans-serif;
-  font-size:clamp(2.4rem,7.5vw,5.8rem);
-  font-weight:800;line-height:1.03;letter-spacing:-2.5px;
-  color:var(--ink);margin-bottom:1.6rem;
-  max-width:min(860px,100%);
+  font-size:clamp(2.2rem,5.5vw,4.6rem);
+  font-weight:800;line-height:1.04;letter-spacing:-2px;
+  color:var(--ink);margin-bottom:1.4rem;
 }
 .hero h1 .blue{color:var(--blue)}
-
-/* FIX: Value proposition — more specific, outcome-oriented */
 .hero-sub{
-  font-size:clamp(0.95rem,2.5vw,1.1rem);
-  color:var(--ink2);font-weight:400;
-  max-width:min(520px,100%);line-height:1.75;
-  margin-bottom:0.75rem;
+  font-size:clamp(0.92rem,1.8vw,1.05rem);
+  color:var(--ink3);font-weight:400;
+  line-height:1.78;margin-bottom:2.2rem;
+  max-width:420px;
 }
-/* FIX: Secondary value sentence visible below main sub */
-.hero-sub2{
-  font-size:clamp(0.82rem,2vw,0.92rem);
-  color:var(--ink4);font-weight:400;
-  max-width:min(420px,100%);line-height:1.7;
-  margin:0 auto 2.5rem;
-}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start}
 
-.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* RIGHT — project cards */
+.hero-right{
+  display:flex;flex-direction:column;gap:10px;
+  position:relative;
+}
+.hero-proj{
+  background:var(--g1);border-radius:14px;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:14px 16px;
+  display:flex;align-items:center;gap:14px;
+  transition:all .25s;cursor:default;
+  position:relative;overflow:hidden;
+}
+.hero-proj:hover{
+  background:var(--w);
+  border-color:rgba(0,91,191,0.15);
+  box-shadow:0 8px 28px rgba(0,0,0,0.07);
+  transform:translateX(4px);
+}
+.hero-proj-thumb{
+  width:46px;height:46px;border-radius:10px;
+  background:var(--g2);flex-shrink:0;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;
+}
+.hero-proj-thumb img{width:100%;height:100%;object-fit:cover}
+.hero-proj-info{flex:1;min-width:0}
+.hero-proj-name{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:0.88rem;font-weight:700;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+/* faded description — lower right feel */
+.hero-proj-desc{
+  font-size:0.72rem;color:var(--ink4);
+  margin-top:2px;font-weight:400;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.hero-proj-badge{
+  font-size:0.56rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:980px;flex-shrink:0;
+}
+.hpb-w{background:rgba(0,91,191,0.08);color:var(--blue)}
+.hpb-a{background:rgba(108,53,222,0.08);color:#6c35de}
+.hpb-g{background:rgba(29,131,72,0.08);color:#1d8348}
+.hpb-o{background:rgba(176,111,0,0.08);color:#b06f00}
+/* subtle "more" row */
+.hero-more{
+  text-align:center;font-size:0.72rem;color:var(--ink4);
+  padding:6px 0;font-weight:400;
+}
+.hero-more a{color:var(--blue);font-weight:600;text-decoration:none}
+.hero-more a:hover{text-decoration:underline}
 
 /* FIX: Primary CTA — stronger contrast, clear label, icon for affordance */
 .btn-p{
@@ -231,16 +265,16 @@ section{padding:clamp(3.5rem,8vw,7rem) clamp(1.2rem,5%,3rem)}
 .btn-s:hover{background:var(--g1);border-color:var(--g2)}
 
 .stats{
-  display:flex;gap:clamp(1.5rem,5vw,3.5rem);
-  margin-top:3.5rem;border-top:1px solid var(--g2);
-  padding-top:2.5rem;flex-wrap:wrap;justify-content:center;
+  display:flex;gap:clamp(1.2rem,3vw,2.5rem);
+  margin-top:2.5rem;border-top:1px solid var(--g2);
+  padding-top:2rem;flex-wrap:wrap;justify-content:flex-start;
 }
 .stat-num{
   font-family:'Bricolage Grotesque',sans-serif;
-  font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;
-  letter-spacing:-1px;color:var(--ink);
+  font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;
+  letter-spacing:-0.5px;color:var(--ink);
 }
-.stat-lbl{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4);margin-top:2px;text-align:center;font-weight:500}
+.stat-lbl{font-size:clamp(0.62rem,1.5vw,0.7rem);color:var(--ink4);margin-top:2px;font-weight:500}
 
 /* ── ABOUT ── */
 .about{background:var(--g1)}
@@ -646,7 +680,14 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4)}
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none}
   .ham{display:flex}
-  .hero h1{letter-spacing:-1.5px}
+  /* hero stacks on tablet */
+  .hero{padding-top:calc(var(--nav-h) + 2.5rem)}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-left{align-items:center;text-align:center}
+  .hero h1{letter-spacing:-1.5px;font-size:clamp(2.2rem,6vw,3.4rem)}
+  .hero-sub{max-width:100%;text-align:center}
+  .btns{justify-content:center}
+  .stats{justify-content:center}
   .about-g{grid-template-columns:1fr;gap:2.5rem}
   .srv-g{grid-template-columns:repeat(2,1fr)}
   .proc-g{grid-template-columns:repeat(2,1fr)}
@@ -663,8 +704,8 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4)}
 }
 
 @media(max-width:640px){
-  /* FIX: Mobile — CTA remains prominent, not reduced */
-  .hero h1{letter-spacing:-1px}
+  .hero h1{letter-spacing:-1px;font-size:2rem}
+  .hero-right{display:none} /* hide project list on small mobile — too cramped */
   .btns{flex-direction:column;align-items:center;gap:12px}
   .btn-p,.btn-s{width:100%;max-width:300px;text-align:center;justify-content:center}
   .stats{gap:1.4rem}
@@ -742,35 +783,85 @@ footer p{font-size:clamp(0.66rem,2vw,0.75rem);color:var(--ink4)}
 </div>
 
 <!-- ══ HERO ══ -->
-<!-- FIX: Visual Hierarchy — eyebrow → h1 (biggest) → specific value prop → CTAs → stats -->
 <main id="main">
 <section class="hero" id="home" aria-labelledby="hero-heading">
-  <div class="hero-eyebrow">
-    <span class="dot" aria-hidden="true"></span>
-    Available for new projects
-  </div>
-  <h1 id="hero-heading">
-    We Build <span class="blue">Digital Products</span><br>That Actually Work
-  </h1>
-  <!-- FIX: Value prop is now specific and outcome-focused -->
-  <p class="hero-sub">
-    From landing pages to full-stack web apps — VyomsTech ships fast, clean, and on budget.
-  </p>
-  <p class="hero-sub2">
-    Serving startups, students, and businesses across India. Remote-first, always responsive.
-  </p>
-  <div class="btns">
-    <!-- FIX: Primary CTA label tells exactly what happens next -->
-    <a href="#works" class="btn-p">
-      See Our Work <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    </a>
-    <a href="#contact" class="btn-s">Get In Touch</a>
-  </div>
-  <div class="stats" role="list">
-    <div role="listitem"><div class="stat-num">10+</div><div class="stat-lbl">Projects Done</div></div>
-    <div role="listitem"><div class="stat-num">5+</div><div class="stat-lbl">Happy Clients</div></div>
-    <div role="listitem"><div class="stat-num">24h</div><div class="stat-lbl">Avg. Reply Time</div></div>
-    <div role="listitem"><div class="stat-num">100%</div><div class="stat-lbl">Delivered On Scope</div></div>
+  <div class="hero-inner">
+
+    <!-- LEFT: headline + sub + CTAs + stats -->
+    <div class="hero-left reveal">
+      <h1 id="hero-heading">
+        We Build <span class="blue">Digital<br>Products</span> That<br>Actually Work
+      </h1>
+      <p class="hero-sub">
+        From landing pages to full-stack web apps — VyomsTech ships fast, clean, and on budget.
+      </p>
+      <div class="btns">
+        <a href="#works" class="btn-p">
+          See Our Work <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="#contact" class="btn-s">Get In Touch</a>
+      </div>
+      <div class="stats" role="list">
+        <div role="listitem"><div class="stat-num">10+</div><div class="stat-lbl">Projects Done</div></div>
+        <div role="listitem"><div class="stat-num">5+</div><div class="stat-lbl">Happy Clients</div></div>
+        <div role="listitem"><div class="stat-num">24h</div><div class="stat-lbl">Reply Time</div></div>
+        <div role="listitem"><div class="stat-num">100%</div><div class="stat-lbl">On Scope</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: recent project cards -->
+    <div class="hero-right reveal">
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/gg.png" alt="" onerror="this.parentElement.textContent='🌐'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">Ghosh Global</div>
+          <div class="hero-proj-desc">Full-scale business web presence, end-to-end</div>
+        </div>
+        <span class="hero-proj-badge hpb-w">Client</span>
+      </div>
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/WhatsApp Image 2026-05-14 at 16.43.17.jpeg" alt="" onerror="this.parentElement.textContent='📚'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">GateHub</div>
+          <div class="hero-proj-desc">Notes library for engineering students</div>
+        </div>
+        <span class="hero-proj-badge hpb-w">Web App</span>
+      </div>
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/image.png" alt="" onerror="this.parentElement.textContent='🧠'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">TrackMind</div>
+          <div class="hero-proj-desc">AI-powered habit & focus tracker</div>
+        </div>
+        <span class="hero-proj-badge hpb-a">React · AI</span>
+      </div>
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/dx.png" alt="" onerror="this.parentElement.textContent='🔍'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">DexMaster</div>
+          <div class="hero-proj-desc">Feature-rich data explorer with clean UI</div>
+        </div>
+        <span class="hero-proj-badge hpb-o">JS</span>
+      </div>
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/vim.png" alt="" onerror="this.parentElement.textContent='🌍'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">VyomWorld</div>
+          <div class="hero-proj-desc">Immersive world-building web experience</div>
+        </div>
+        <span class="hero-proj-badge hpb-g">Creative</span>
+      </div>
+      <div class="hero-proj">
+        <div class="hero-proj-thumb"><img src="images/pb.png" alt="" onerror="this.parentElement.textContent='⚡'"></div>
+        <div class="hero-proj-info">
+          <div class="hero-proj-name">Pokebuild</div>
+          <div class="hero-proj-desc">Interactive team builder for fans & strategists</div>
+        </div>
+        <span class="hero-proj-badge hpb-o">JS</span>
+      </div>
+      <div class="hero-more"><a href="#works">See all projects →</a></div>
+    </div>
+
   </div>
 </section>
 
